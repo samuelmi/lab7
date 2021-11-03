@@ -1,0 +1,158 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Oct  7 11:53:18 2021
+# Process ID: 7468
+# Current directory: F:/Comp541/Lab7
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2512 F:\Comp541\Lab7\Lab7.xpr
+# Log file: F:/Comp541/Lab7/vivado.log
+# Journal file: F:/Comp541/Lab7\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/Comp541/Lab7/Lab7.xpr
+INFO: [Project 1-313] Project file moved from 'D:/Comp541/Lab7' since last save.
+WARNING: [filemgmt 56-2] Default IP Output Path : Could not find the directory 'F:/Comp541/Lab7/Lab7.gen/sources_1', nor could it be found using path 'D:/Comp541/Lab7/Lab7.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
+open_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:10 . Memory (MB): peak = 1248.742 ; gain = 0.000
+update_compile_order -fileset sources_1
+import_files -norecurse F:/Comp541/Lab2b/Lab2b.srcs/sources_1/new/ALU.sv
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+import_files -norecurse {F:/Comp541/Lab2b/Lab2b.srcs/sources_1/new/shifter.sv F:/Comp541/Lab2b/Lab2b.srcs/sources_1/imports/new/add_sub_8bit.sv F:/Comp541/Lab2b/Lab2b.srcs/sources_1/new/comparator.sv}
+update_compile_order -fileset sources_1
+import_files -norecurse {F:/Comp541/Lab2b/Lab2b.srcs/sources_1/new/logical.sv F:/Comp541/Lab2b/Lab2b.srcs/sources_1/imports/new/adder4bit.sv F:/Comp541/Lab2b/Lab2b.srcs/sources_1/imports/new/adder8bit.sv}
+update_compile_order -fileset sources_1
+import_files -norecurse {F:/Comp541/Lab2b/Lab2b.srcs/sources_1/new/adder.sv F:/Comp541/Lab2b/Lab2b.srcs/sources_1/new/fulladder.sv}
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files F:/Comp541/Lab7/Lab7.srcs/sources_1/imports/sources_1/imports/new/adder8bit.sv] -no_script -reset -force -quiet
+remove_files  F:/Comp541/Lab7/Lab7.srcs/sources_1/imports/sources_1/imports/new/adder8bit.sv
+remove_files  F:/Comp541/Lab7/Lab7.srcs/sources_1/imports/sources_1/imports/new/adder8bit.sv
+WARNING: [Vivado 12-818] No files matched 'F:/Comp541/Lab7/Lab7.srcs/sources_1/imports/sources_1/imports/new/adder8bit.sv'
+export_ip_user_files -of_objects  [get_files F:/Comp541/Lab7/Lab7.srcs/sources_1/imports/sources_1/imports/new/adder4bit.sv] -no_script -reset -force -quiet
+remove_files  F:/Comp541/Lab7/Lab7.srcs/sources_1/imports/sources_1/imports/new/adder4bit.sv
+close [ open F:/Comp541/Lab7/Lab7.srcs/sources_1/new/datapath.sv w ]
+add_files F:/Comp541/Lab7/Lab7.srcs/sources_1/new/datapath.sv
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+file mkdir F:/Comp541/Lab7/Lab7.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open F:/Comp541/Lab7/Lab7.srcs/sim_1/new/datapath_test.sv w ]
+add_files -fileset sim_1 F:/Comp541/Lab7/Lab7.srcs/sim_1/new/datapath_test.sv
+update_compile_order -fileset sim_1
+set_property top datapath_test [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'datapath_test'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/Comp541/Lab7/Lab7.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'datapath_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/Comp541/Lab7/Lab7.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj datapath_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Comp541/Lab7/Lab7.srcs/sources_1/imports/new/ALU.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Comp541/Lab7/Lab7.srcs/sources_1/imports/sources_1/imports/new/add_sub_8bit.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module addsub
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Comp541/Lab7/Lab7.srcs/sources_1/imports/new/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Comp541/Lab7/Lab7.srcs/sources_1/imports/sources_1/new/comparator.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Comp541/Lab7/Lab7.srcs/sources_1/new/datapath.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module datapath
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Comp541/Lab7/Lab7.srcs/sources_1/imports/new/fulladder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fulladder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Comp541/Lab7/Lab7.srcs/sources_1/imports/sources_1/new/logical.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module logical
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Comp541/Lab7/Lab7.srcs/sources_1/new/register_file.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Comp541/Lab7/Lab7.srcs/sources_1/imports/sources_1/new/shifter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module shifter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/Comp541/Lab7/Lab7.srcs/sim_1/new/datapath_test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module datapath_test
+WARNING: [VRFC 10-3380] identifier 'ERROR_RD1' is used before its declaration [F:/Comp541/Lab7/Lab7.srcs/sim_1/new/datapath_test.sv:108]
+INFO: [VRFC 10-311] analyzing module selfcheck
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Comp541/Lab7/Lab7.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1248.742 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '6' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/Comp541/Lab7/Lab7.sim/sim_1/behav/xsim'
+"xelab -wto a70dc5c19ac84969967b8cbb9069f406 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot datapath_test_behav xil_defaultlib.datapath_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto a70dc5c19ac84969967b8cbb9069f406 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot datapath_test_behav xil_defaultlib.datapath_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "F:/Comp541/Lab7/Lab7.srcs/sources_1/imports/new/ALU.sv" Line 2. Module ALU doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Comp541/Lab7/Lab7.srcs/sources_1/imports/sources_1/imports/new/add_sub_8bit.sv" Line 2. Module addsub doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Comp541/Lab7/Lab7.srcs/sources_1/imports/new/adder.sv" Line 2. Module adder_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Comp541/Lab7/Lab7.srcs/sources_1/imports/sources_1/new/comparator.sv" Line 2. Module comparator doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Comp541/Lab7/Lab7.srcs/sources_1/imports/new/ALU.sv" Line 2. Module ALU doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Comp541/Lab7/Lab7.srcs/sources_1/imports/sources_1/imports/new/add_sub_8bit.sv" Line 2. Module addsub doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Comp541/Lab7/Lab7.srcs/sources_1/imports/new/adder.sv" Line 2. Module adder_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "F:/Comp541/Lab7/Lab7.srcs/sources_1/imports/sources_1/new/comparator.sv" Line 2. Module comparator doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.fulladder
+Compiling module xil_defaultlib.adder_default
+Compiling module xil_defaultlib.addsub
+Compiling module xil_defaultlib.shifter
+Compiling module xil_defaultlib.logical
+Compiling module xil_defaultlib.comparator
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.register_file
+Compiling module xil_defaultlib.datapath
+Compiling module xil_defaultlib.selfcheck
+Compiling module xil_defaultlib.datapath_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot datapath_test_behav
+
+****** Webtalk v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source F:/Comp541/Lab7/Lab7.sim/sim_1/behav/xsim/xsim.dir/datapath_test_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'F:/Comp541/Lab7/Lab7.sim/sim_1/behav/xsim/xsim.dir/datapath_test_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Oct  7 15:38:23 2021. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2021.1/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 86.285 ; gain = 4.609
+INFO: [Common 17-206] Exiting Webtalk at Thu Oct  7 15:38:23 2021...
+run_program: Time (s): cpu = 00:00:03 ; elapsed = 00:00:23 . Memory (MB): peak = 1248.742 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '23' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/Comp541/Lab7/Lab7.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "datapath_test_behav -key {Behavioral:sim_1:Functional:datapath_test} -tclbatch {datapath_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source datapath_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 19 ns : File "F:/Comp541/Lab7/Lab7.srcs/sim_1/new/datapath_test.sv" Line 94
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'datapath_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:14 ; elapsed = 00:00:36 . Memory (MB): peak = 1248.742 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 1248.742 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Oct  7 15:40:08 2021...
